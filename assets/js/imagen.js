@@ -8,10 +8,13 @@ getAnimal.addEventListener("change", async() => {
     const imagenAnimal = animales.find(
         (animal) => animal.name === getAnimal.value
     )
-    const getImagen = `<img width = 212px height = 200 src="/assets/imgs/${imagenAnimal.imagen}" alt="">`
-    console.log(getImagen);
+    const getImagen = `<img width = 200px src="/assets/imgs/${imagenAnimal.imagen}" alt="">`
     
-    preview.innerHTML = getImagen
+    listaImagen.innerHTML = getImagen
 
-    preview.style.backgroundImage = `url(${getImagen})`
+    const Imagenes = document.querySelector("#listaImagen img")
+
+        const direccionImagen = Imagenes.src
+
+    preview.style.backgroundImage = `url(${direccionImagen})`
 })
