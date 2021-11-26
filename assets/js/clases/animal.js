@@ -46,6 +46,9 @@ class Animal {
     set setSonido(nuevoSonido) {
         this._sonido =nuevoSonido;
     }
+
 }
+
+
 
 export default Animal;
